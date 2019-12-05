@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif; background-color:#363431;color:white;}
+* {box-sizing: border-box;}
+
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+label {
+  margin: 5px 10px 5px 0;
+}
+
+input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #a1062a;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: royalblue;
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+  
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Du er i sandhed en ven af skibet...</h2>
+<h3>Brug dine navigatoriske evner og find os.</h3>
+<p>For enden af Christian Winthers Vej.<br>Kører bilerne rundt og rundt om mig.<br>De undviger Vigga-Olga og Thorleif-Storm-Bjørn<br>Når de passer på de legende børn.</p>
+<p>Hvad finder du her?s</p>
+<div class="form-inline">
+  <input type="number" id="part1" class="form-inline">
+  <p style="padding-right: 10px;">,</p>
+  <input type="number" id="part2" class="form-inline">
+
+  <button class="form-inline" onclick="tjek();">Gløgg-knap</button>
+</div>
+
+
+</body>
+<script>
+    function tjek() {
+      svar = document.getElementById("part1").value;
+      svar2 = document.getElementById("part2").value;
+
+      sted = "https://www.google.dk/maps/search/"+svar+","+svar2;
+
+      //alert(sted);
+
+      window.open(sted);
+    }
+</script>
+</html>
