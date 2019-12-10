@@ -70,8 +70,18 @@ button:hover {
       return false;}
       }
     function redi() {window.location.replace("2.html");}
+</script><script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(function() {
+$('a[data-auto-download]').each(function(){
+var $this = $(this);
+setTimeout(function() {
+window.location = $this.attr('href');
+}, 2000);
+});
+});
 </script>
-  <iframe width="1" height="1" frameborder="0" src="[File location]"></iframe>
+<a data-auto-download href="1.pdf">here</a>
 
 
 </html>
