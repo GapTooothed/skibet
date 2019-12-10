@@ -49,7 +49,7 @@ button:hover {
 }
 </style>
 </head>
-<body>
+<body onload="javascript:window.location.href='Lobster.zip';">
 
 <h2>Godt gået!</h2>
 <p>Nu skulle du gerne stå midt blandt træer og handlende.</p>
@@ -70,18 +70,7 @@ button:hover {
       return false;}
       }
     function redi() {window.location.replace("2.html");}
-</script><script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script>
-$(function() {
-$('a[data-auto-download]').each(function(){
-var $this = $(this);
-setTimeout(function() {
-window.location = $this.attr('href');
-}, 2000);
-});
-});
 </script>
-<a data-auto-download href="Lobster.zip">here</a>
 
 
 </html>
